@@ -1,11 +1,11 @@
-"""Tests for pycookiecheat.common."""
+"""Tests for pycookiefetch.common."""
 
 import typing as t
 
 import pytest
 
-from pycookiecheat.__main__ import _cli
-from pycookiecheat.common import (
+from pycookiefetch.__main__ import _cli
+from pycookiefetch.common import (
     BrowserType,
     Cookie,
     generate_host_keys,

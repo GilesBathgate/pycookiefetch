@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 zip-safe = false
 
 [tool.setuptools.dynamic]
-version = {attr = "pycookiecheat.__version__"}
+version = {attr = "pycookiefetch.__version__"}
 readme = {file = ["README.md", "CHANGELOG.md"], content-type = "text/markdown"}
 
 [tool.mypy]
@@ -28,13 +28,13 @@ line-length = 79
 select = ["I", "E4", "E7", "E9", "F"]
 
 [project]
-name = "pycookiecheat"
+name = "pycookiefetch"
 urls = {homepage = "https://github.com/n8henrie/pycookiecheat"}
 dynamic = ["version", "readme"]
 license = { text = "MIT" }
 description = "Borrow cookies from your browser's authenticated session for use in Python scripts."
 authors = [ {name = "Nathan Henrie", email = "nate@n8henrie.com"} ]
-keywords = ["pycookiecheat", "chrome", "chromium cookies", "cookies", "firefox"]
+keywords = ["pycookiefetch", "chrome", "chromium cookies", "cookies", "firefox"]
 classifiers= [
     "Natural Language :: English",
     "Programming Language :: Python :: 3",
@@ -64,4 +64,4 @@ dev = [
 ]
 
 [project.scripts]
-pycookiecheat = "pycookiecheat.__main__:main"
+pycookiefetch = "pycookiefetch.__main__:main"

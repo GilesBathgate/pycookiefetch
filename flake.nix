@@ -20,19 +20,19 @@
       system:
       let
         pkgs = import nixpkgs { inherit system; };
-        pname = "pycookiecheat";
+        pname = "pycookiefetch";
         propagatedBuildInputs = with pkgs.python312Packages; [
           cryptography
           keyring
         ];
-        pycookiecheat =
+        pycookiefetch =
           { lib, python312 }:
           python312.pkgs.buildPythonPackage {
             inherit pname;
             version = builtins.elemAt (lib.splitString "\"" (
               lib.findSingle (val: builtins.match "^__version__ = \".*\"$" val != null) (abort "none")
                 (abort "multiple")
-                (lib.splitString "\n" (builtins.readFile ./src/pycookiecheat/__init__.py))
+                (lib.splitString "\n" (builtins.readFile ./src/pycookiefetch/__init__.py))
             )) 1;
 
             src = lib.cleanSource ./.;
@@ -43,7 +43,7 @@
       in
       {
         packages = {
-          ${pname} = pkgs.callPackage pycookiecheat { };
+          ${pname} = pkgs.callPackage pycookiefetch { };
           default = pkgs.python312.withPackages (_: [ self.packages.${system}.${pname} ]);
         };
 
@@ -67,7 +67,7 @@
 
         apps.default = {
           type = "app";
-          program = "${self.outputs.packages.${system}.pycookiecheat}/bin/pycookiecheat";
+          program = "${self.outputs.packages.${system}.pycookiefetch}/bin/pycookiefetch";
         };
       }
     );

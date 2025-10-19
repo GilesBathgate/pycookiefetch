@@ -1,4 +1,4 @@
-# pycookiecheat
+# pycookiefetch
 
 [![master branch build
 status](https://github.com/n8henrie/pycookiecheat/actions/workflows/python-package.yml/badge.svg?branch=master)](https://github.com/n8henrie/pycookiecheat/actions/workflows/python-package.yml)
@@ -12,11 +12,11 @@ scripts.
 ## Installation
 
 **NB:** Use `pip` and `python` instead of `pip3` and `python3` if you're still
-on Python 2 and using pycookiecheat < v0.4.0. pycookiecheat >= v0.4.0 requires
+on Python 2 and using pycookiefetch < v0.4.0. pycookiefetch >= v0.4.0 requires
 Python 3 and in general will aim to support python versions that are stable and
 not yet end-of-life: <https://devguide.python.org/versions>.
 
-- `python3 -m pip install pycookiecheat`
+- `python3 -m pip install pycookiefetch`
 
 ### Installation notes regarding alternative keyrings on Linux
 
@@ -36,7 +36,7 @@ Alternatively, some users have suggested running Chrome with the
 ### Development Setup
 
 1. `git clone https://github.com/n8henrie/pycookiecheat.git`
-1. `cd pycookiecheat`
+1. `cd pycookiefetch`
 1. `python3 -m venv .venv`
 1. `./.venv/bin/python -m pip install -e .[dev]`
 
@@ -48,8 +48,8 @@ After installation, the CLI tool can be run as a python module `python -m` or
 with a standalone console script:
 
 ```console
-$ python -m pycookiecheat --help
-usage: pycookiecheat [-h] [-b BROWSER] [-o OUTPUT_FILE] [-v] [-c COOKIE_FILE]
+$ python -m pycookiefetch --help
+usage: pycookiefetch [-h] [-b BROWSER] [-o OUTPUT_FILE] [-v] [-c COOKIE_FILE]
                      [-V]
                      url
 
@@ -77,7 +77,7 @@ Netscape Cookie File Format.
 ### As a Python Library
 
 ```python
-from pycookiecheat import BrowserType, get_cookies
+from pycookiefetch import BrowserType, get_cookies
 import requests
 
 url = 'https://n8henrie.com'
@@ -112,7 +112,7 @@ I don't use Windows or have a PC, so I won't be adding support myself. Feel
 free to make a PR :)
 
 ### I get an installation error with the `cryptography` module on OS X
-(pycookiecheat <v0.4.0)
+(pycookiefetch <v0.4.0)
 
 If you're getting [this
 error](https://github.com/n8henrie/pycookiecheat/pull/11#issuecomment-221918807)
@@ -128,9 +128,9 @@ Please check the official cryptography docs. On some systems (e.g. Ubuntu), you
 may need to do something like `sudo apt-get install build-essential libssl-dev
 libffi-dev python-dev` prior to installing with `pip`.
 
-### How can I use pycookiecheat on KDE-based Linux distros?
+### How can I use pycookiefetch on KDE-based Linux distros?
 
-On KDE, Chrome defaults to using KDE's own keyring, KWallet. For pycookiecheat to support KWallet the [`dbus-python`](https://pypi.org/project/dbus-python/) package must be installed.
+On KDE, Chrome defaults to using KDE's own keyring, KWallet. For pycookiefetch to support KWallet the [`dbus-python`](https://pypi.org/project/dbus-python/) package must be installed.
 
 ### How do I install the (unreleased) master branch with pip?
 

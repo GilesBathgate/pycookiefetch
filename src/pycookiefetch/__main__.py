@@ -1,4 +1,4 @@
-"""Provide a command-line tool for pycookiecheat."""
+"""Provide a command-line tool for pycookiefetch."""
 
 import argparse
 import json
@@ -10,7 +10,7 @@ from .common import BrowserType, get_cookies
 
 def _cli() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
-        prog="pycookiecheat",
+        prog="pycookiefetch",
         description="Copy cookies from Chrome or Firefox and output as json",
     )
     parser.add_argument("url")

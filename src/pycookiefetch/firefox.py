@@ -7,7 +7,7 @@ Accepts a URL from which it tries to extract a domain. If you want to force the
 domain, just send it the domain you'd like to use instead.
 
 Example:
-    >>> from pycookiecheat import firefox_cookies
+    >>> from pycookiefetch import firefox_cookies
     >>> firefox_cookies("https://github.com")
     {'logged_in': 'yes', 'user_session': 'n3tZzN45P56Ovg5MB'}
 """
@@ -23,7 +23,7 @@ import tempfile
 import typing as t
 from pathlib import Path
 
-from pycookiecheat.common import (
+from pycookiefetch.common import (
     BrowserType,
     Cookie,
     generate_host_keys,

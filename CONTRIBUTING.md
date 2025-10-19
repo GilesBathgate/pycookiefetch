@@ -32,8 +32,8 @@ Look through the GitHub issues for features. Anything tagged with
 
 ### Write Documentation
 
-pycookiecheat could always use more documentation,
-whether as part of the official pycookiecheat docs,
+pycookiefetch could always use more documentation,
+whether as part of the official pycookiefetch docs,
 in docstrings, or even on the web in blog posts, articles, and such.
 
 ### Submit Feedback
@@ -52,14 +52,14 @@ If you are proposing a feature:
 Get Started!
 ------------
 
-Ready to contribute? Here's how to set up pycookiecheat
+Ready to contribute? Here's how to set up pycookiefetch
 for local development.
 
-1.  Fork the pycookiecheat repo on GitHub.
+1.  Fork the pycookiefetch repo on GitHub.
 1.  Clone your fork locally:
 
-        $ git clone git@github.com:your_name_here/pycookiecheat.git
-        $ cd pycookiecheat
+        $ git clone git@github.com:your_name_here/pycookiefetch.git
+        $ cd pycookiefetch
 
 1.  Install your local copy into a virtualenv (`venv` in modern python). Some
     linux distributions will require you to install `python-venv` or
@@ -70,7 +70,7 @@ for local development.
         $ python3 -m venv .venv # set up hidden virtualenv folder: .venv
         $ source ./.venv/bin/actiate # activate virtualenv
         $ which python
-        /Users/me/pycookiecheat/.venv/bin/python
+        /Users/me/pycookiefetch/.venv/bin/python
         $ python -m pip install -e .[dev] # editable install with dev deps
 
 1.  Create a branch for local development:

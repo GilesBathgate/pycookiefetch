@@ -1,4 +1,4 @@
-"""pycookiecheat.py :: Retrieve and decrypt cookies from Chrome.
+"""pycookiefetch.py :: Retrieve and decrypt cookies from Chrome.
 
 See relevant post at https://n8henrie.com/2013/11/use-chromes-cookies-for-easier-downloading-with-python-requests/  # noqa
 
@@ -24,7 +24,7 @@ from cryptography.hazmat.primitives.ciphers.modes import CBC
 from cryptography.hazmat.primitives.hashes import SHA1
 from cryptography.hazmat.primitives.kdf.pbkdf2 import PBKDF2HMAC
 
-from pycookiecheat.common import (
+from pycookiefetch.common import (
     BrowserType,
     Cookie,
     generate_host_keys,
@@ -56,7 +56,7 @@ def clean(decrypted: bytes) -> str:
         logging.error(
             "UTF8 decoding of the decrypted cookie failed. This is most often "
             "due to attempting decryption with an incorrect key. Consider "
-            "searching the pycookiecheat issues for `UnicodeDecodeError`."
+            "searching the pycookiefetch issues for `UnicodeDecodeError`."
         )
         raise
 

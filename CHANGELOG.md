@@ -31,7 +31,7 @@
 
 - Now requires python >= 3.8
     - 3.7 is now EoL: https://devguide.python.org/versions/
-    - pycookiecheat seems to build and run on 3.7, but several test
+    - pycookiefetch seems to build and run on 3.7, but several test
       dependencies require versions that are either incompatible with 3.12 or
       3.7
 - Add `BrowserType` enum

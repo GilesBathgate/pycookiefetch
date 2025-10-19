@@ -1,4 +1,4 @@
-"""Common code for pycookiecheat."""
+"""Common code for pycookiefetch."""
 
 from __future__ import annotations
 
@@ -10,7 +10,7 @@ from enum import Enum, unique
 from pathlib import Path
 from warnings import warn
 
-import pycookiecheat
+import pycookiefetch
 
 logger = logging.getLogger(__name__)
 
@@ -88,7 +88,7 @@ class BrowserType(str, Enum):
     >>> "chrome" is BrowserType.CHROME
     True
 
-    TODO: consider using `enum.StrEnum` once pycookiecheat depends on python >=
+    TODO: consider using `enum.StrEnum` once pycookiefetch depends on python >=
     3.11
     """
 
@@ -180,7 +180,7 @@ def get_cookies(
         Dictionary of cookie values for URL
     """
     if browser == BrowserType.FIREFOX:
-        cookies = pycookiecheat.firefox_cookies(
+        cookies = pycookiefetch.firefox_cookies(
             url,
             browser=browser,
             as_cookies=as_cookies,
@@ -189,7 +189,7 @@ def get_cookies(
             profile_name=profile_name,
         )
     else:
-        cookies = pycookiecheat.chrome_cookies(
+        cookies = pycookiefetch.chrome_cookies(
             url,
             browser=browser,
             as_cookies=as_cookies,

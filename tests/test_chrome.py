@@ -1,4 +1,4 @@
-"""test_pycookiecheat.py :: Tests for pycookiecheat module."""
+"""test_pycookiefetch.py :: Tests for pycookiefetch module."""
 
 import os
 import sys
@@ -11,8 +11,8 @@ from uuid import uuid4
 import pytest
 from playwright.sync_api import sync_playwright
 
-from pycookiecheat import BrowserType, chrome_cookies, get_cookies
-from pycookiecheat.chrome import get_linux_config, get_macos_config
+from pycookiefetch import BrowserType, chrome_cookies, get_cookies
+from pycookiefetch.chrome import get_linux_config, get_macos_config
 
 BROWSER = os.environ.get("TEST_BROWSER_NAME", "Chromium")
 
@@ -57,7 +57,7 @@ def ci_setup() -> t.Generator:
         page.goto("https://n8henrie.com")
         browser.add_cookies([
             {
-                "name": "test_pycookiecheat",
+                "name": "test_pycookiefetch",
                 "value": "It worked!",
                 "domain": "n8henrie.com",
                 "path": "/",
@@ -100,7 +100,7 @@ def test_fake_cookie(ci_setup: str) -> None:
             browser=BrowserType(BROWSER),
         ),
     )
-    assert cookies.get("test_pycookiecheat") == "It worked!"
+    assert cookies.get("test_pycookiefetch") == "It worked!"
 
     assert cookies == get_cookies(
         "https://n8henrie.com",

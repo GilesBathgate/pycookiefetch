@@ -14,8 +14,8 @@ import pytest
 from playwright.sync_api import sync_playwright
 from pytest import FixtureRequest, TempPathFactory
 
-from pycookiecheat import BrowserType, firefox_cookies, get_cookies
-from pycookiecheat.firefox import (
+from pycookiefetch import BrowserType, firefox_cookies, get_cookies
+from pycookiefetch.firefox import (
     FirefoxProfileNotPopulatedError,
     _find_firefox_default_profile,
     _get_profiles_dir_for_os,
@@ -118,7 +118,7 @@ def _make_test_profiles(
                 headless=True,
             ).close()
     with patch(
-        "pycookiecheat.firefox._get_profiles_dir_for_os",
+        "pycookiefetch.firefox._get_profiles_dir_for_os",
         return_value=tmp_path,
     ):
         yield tmp_path
